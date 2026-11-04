@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+MolRSI: recursive self-improvement for molecular discovery.
+15.9% antibacterial hit rate. 8 selective pMHC binder hits.
+
+00:06.000 --> 00:10.000
+The inner loop optimizes workflows within the current task.
+
+00:10.000 --> 00:15.500
+The outer loop carries experience across tasks.
+Both loops update shared memory.
+
+00:15.500 --> 00:30.000
+Accumulated experience improves the effective search policy:
+which workflows to select, refine and repair next.
+
+00:30.000 --> 00:33.500
+More experience makes better workflows available for transfer.
+
+00:33.500 --> 00:37.000
+Antibacterial discovery: MolRSI compared with five agents
+across all six antibacterial tasks.
+
+00:37.000 --> 00:39.000
+Experimental hit rate: 15.9% versus 8.7%
+for an expert-designed, non-agentic workflow.
+
+00:39.000 --> 00:42.500
+Dose–response follow-up: selected compounds C3 and C32.
+MRSA MICs of 1 and 8 micrograms per milliliter.
+
+00:42.500 --> 00:47.500
+De novo pMHC binder design: 8 selective binder hits
+versus 0 for Claude Science under the same criteria.
+
+00:47.500 --> 00:52.000
+Two rounds of phage display and sequencing measure
+target enrichment and preference over tested off-targets.
+
+00:52.000 --> 00:58.000
+Predicted on-target and off-target complexes.
+Rotation and close-up of the binding interfaces.
+
+00:58.000 --> 01:00.000
+MolRSI. Experience improves the search policy.
