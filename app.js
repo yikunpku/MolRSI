@@ -1,0 +1,10 @@
+'use strict';
+const mainVideo=document.getElementById('main-video');
+document.querySelectorAll('[data-seek]').forEach(button=>button.addEventListener('click',()=>{const go=()=>{mainVideo.currentTime=Number(button.dataset.seek);mainVideo.play().catch(()=>{});};if(mainVideo.readyState>=1)go();else mainVideo.addEventListener('loadedmetadata',go,{once:true});mainVideo.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'});}));
+const dialog=document.getElementById('figure-dialog'),expanded=document.getElementById('expanded-image'),caption=document.getElementById('expanded-caption');
+document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>{expanded.src=button.dataset.image;expanded.alt=button.querySelector('img').alt;caption.textContent=button.dataset.caption;dialog.showModal();}));
+document.getElementById('close-figure').addEventListener('click',()=>dialog.close());
+dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+document.getElementById('copy-citation').addEventListener('click',async()=>{const button=document.getElementById('copy-citation'),status=document.getElementById('copy-status');try{await navigator.clipboard.writeText(document.getElementById('bibtex').textContent);button.textContent='Copied ✓';status.textContent='Citation copied to clipboard.';setTimeout(()=>{button.textContent='Copy citation';status.textContent='';},2500);}catch{const selection=getSelection(),range=document.createRange();range.selectNodeContents(document.getElementById('bibtex'));selection.removeAllRanges();selection.addRange(range);status.textContent='Citation selected. Copy with your keyboard.';button.textContent='Citation selected';}});
+document.querySelectorAll('a[href="#team"]').forEach(link=>link.addEventListener('click',()=>{document.getElementById('team').open=true;}));
+document.addEventListener('visibilitychange',()=>{if(document.hidden){document.querySelectorAll('video').forEach(video=>video.pause());}});
